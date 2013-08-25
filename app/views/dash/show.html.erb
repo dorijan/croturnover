@@ -1,0 +1,9 @@
+Izdani racuni:
+<%= number_to_currency(@ukupno) %><br>
+Loko voznje:
+<%= number_to_currency(@lokoukupno) %><br>
+Racuni placeni:
+<%= number_to_currency(@ulracu) %><br>
+<br>
+Dobit:
+<%= number_to_currency(@ukupno-@ulracu-@lokoukupno) %>

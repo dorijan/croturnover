@@ -1,0 +1,16 @@
+<%= form_for @stavka do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :naziv %><br />
+    <%= f.text_field :naziv %>
+  </p>
+  <p>
+    <%= f.label :cijena %><br />
+    <%= f.text_field :cijena %>
+  </p>
+  <p>
+    <%= f.label :tip %><br />
+    <%= f.number_field :tip %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

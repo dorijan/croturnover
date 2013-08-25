@@ -1,0 +1,31 @@
+<% title "Firmas" %>
+
+<table>
+  <tr>
+    <th>Naziv</th>
+    <th>Sjediste</th>
+    <th>Adresa1</th>
+    <th>Adresa2</th>
+    <th>Gradbroj</th>
+    <th>Mb</th>
+    <th>Oib</th>
+    <th>Ibanbrracuna</th>
+  </tr>
+  <% for firma in @firmas %>
+    <tr>
+      <td><%= firma.naziv %></td>
+      <td><%= firma.sjediste %></td>
+      <td><%= firma.adresa1 %></td>
+      <td><%= firma.adresa2 %></td>
+      <td><%= firma.gradbroj %></td>
+      <td><%= firma.mb %></td>
+      <td><%= firma.OIB %></td>
+      <td><%= firma.ibanbrracuna %></td>
+      <td><%= link_to "Show", firma %></td>
+      <td><%= link_to "Edit", edit_firma_path(firma) %></td>
+      <td><%= link_to "Destroy", firma, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Firma", new_firma_path %></p>

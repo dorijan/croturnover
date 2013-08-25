@@ -1,0 +1,2 @@
+module UlracunisHelper
+end

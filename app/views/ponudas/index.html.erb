@@ -1,0 +1,21 @@
+<% title "Ponudas" %>
+
+<table>
+  <tr>
+    <th>Firma</th>
+    <th>Datum</th>
+    <th>Redbroj</th>
+  </tr>
+  <% for ponuda in @ponudas %>
+    <tr>
+      <td><%= ponuda.firma %></td>
+      <td><%= ponuda.datum %></td>
+      <td><%= ponuda.redbroj %></td>
+      <td><%= link_to "Show", ponuda %></td>
+      <td><%= link_to "Edit", edit_ponuda_path(ponuda) %></td>
+      <td><%= link_to "Destroy", ponuda, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Ponuda", new_ponuda_path %></p>

@@ -1,0 +1,40 @@
+<% title "Ulracuni" %>
+
+<p>
+  <strong>Datum:</strong>
+  <%= @ulracuni.datum %>
+</p>
+<p>
+  <strong>Opis:</strong>
+  <%= @ulracuni.opis %>
+</p>
+<p>
+  <strong>Iznos:</strong>
+  <%= @ulracuni.iznos %>
+</p>
+<p>
+  <strong>Priznos:</strong>
+  <%= @ulracuni.priznos %>
+</p>
+<p>
+  <strong>Scan File Name:</strong>
+  <%= @ulracuni.scan_file_name %>
+</p>
+<p>
+  <strong>Scan Content Type:</strong>
+  <%= @ulracuni.scan_content_type %>
+</p>
+<p>
+  <strong>Scan File Size:</strong>
+  <%= @ulracuni.scan_file_size %>
+</p>
+<p>
+  <strong>Scan Updated At:</strong>
+  <%= @ulracuni.scan_updated_at %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_ulracuni_path(@ulracuni) %> |
+  <%= link_to "Destroy", @ulracuni, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", ulracunis_path %>
+</p>

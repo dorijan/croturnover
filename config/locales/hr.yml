@@ -1,0 +1,83 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+hr:
+  ukuisplatu: "Ukupno za isplatu"
+  ostalitro: "Ostali troškovi"
+  ukupnoprije: "Ukupno prijeđeno"
+  obracun: "OBRAČUN"
+  registr: "Registracija"
+  markaaut: "Marka automobila"
+  imeiprez: "Ime i prezime:"
+  evidloko: "EVIDENCIJA O LOKO VOŽNJI ZA"
+  evidloko2: "RAZDOBLJE OD"
+  do: "DO"
+  godine: "GODINE"  
+  lokovo: "Loko vožnje"
+  dodtrosak: "Dodatni trošak"
+  izvjoradu: "Izvješče o radu"
+  brojkil: "Broj prijeđenih kilometara"
+  krajstanje: "Završno stanje"
+  pocstanje: "Početno stanje"
+  iznpon: "Iznos ponude:"
+  primateljponude: "Primatelj ponude:"
+  rokponude: "Ponuda vrijedi do:"
+  mjestoizdpon: "Mjesto izdavanja ponude"
+  datumponuda: "Datum ponude"
+  ponudabroj: "Ponuda broj:"
+  ponuda: "Ponuda"
+  logintocont: "Ulogirajte se u sustav "
+  ziro: "Žiro račun: "
+  mjestoizd: "Mjesto izdavanja: "
+  iznzapl: "Iznos za platiti:"
+  rokpl: "Dospijeće plaćanja: "
+  pozbroj: "Poziv na broj: "
+  napomena: "NAPOMENA: Poduzetnik nije u sustavu PDV-a te PDV nije obračunat sukladno članku 22., stavak 1. Zakona o porezu na dodanu vrijednost."
+  racbroj: "Račun broj: "
+  Vrstar: "Vrsta računa:"
+  primatelj: "Primatelj računa:"
+  iban: "IBAN računa"
+  OIB: "OIB"
+  datumr: "Datum računa:"
+  datumis: "Datum isporuke:"
+  izdavatelj: "Izdavatelj računa:"
+  racun: "Račun"
+  popust: "Popust(%)"
+  time:
+    formats: 
+      default: "%d.%m.%Y %H:%M"
+  date:
+    month_names: [~, Siječanj, Veljača, Ožujak, Travanj, Svibanj, Lipanj, Srpanj, Kolovoz, Rujan, Listopad, Studeni, Prosinac]
+    abbr_month_names: [~, Sij, Velj, Ožu, Tra, Svi, Lip, Srp, Kol, Ruj, List, Stu, Pro]  
+    day_names: [Nedjelja, Ponedjeljak, Utorak, Srijeda, Četvrtak, Petak, Subota]
+    abbr_day_names: [Ned, Pon, Uto, Sri, Čet, Pet, Sub]
+    formats:
+      default: "%d.%m.%Y"
+      short: "%d %b "
+      long: "%B %d, %Y"
+    order:
+      - :day
+      - :month
+      - :year
+  will_paginate:
+    next_label: Sljedeća &#8594;
+    page_entries_info:
+      multi_page: Displaying %{model} %{from} - %{to} of %{count} in total
+      multi_page_html: Displaying %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b>
+        in total
+      single_page:
+        one: Displaying 1 %{model}
+        other: Displaying all %{count} %{model}
+        zero: No %{model} found
+      single_page_html:
+        one: Displaying <b>1</b> %{model}
+        other: Displaying <b>all&nbsp;%{count}</b> %{model}
+        zero: No %{model} found
+    page_gap: ! '&hellip;'
+    previous_label: ! '&#8592; Prethodna'
+  number:
+    currency:
+      format:
+        format: "%n %u"
+        separator: ","
+        delimiter: "."		
+        unit: "KN"	

@@ -1,0 +1,27 @@
+<%= form_for @ulracuni, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :datum %><br />
+    <%= f.date_select :datum %>
+  </p>
+  <p>
+    <%= f.label :firma_id %><br />
+    <%= collection_select(:ulracuni, :firma_id, Firma.all, :id, :naziv) %>	
+  </p>  
+  <p>
+    <%= f.label :opis %><br />
+    <%= f.text_field :opis %>
+  </p>
+  <p>
+    <%= f.label :iznos %><br />
+    <%= f.text_field :iznos %>
+  </p>
+  <p>
+    <%= f.label :priznos %><br />
+    <%= f.text_field :priznos %>
+  </p>
+  <p>
+		<%= f.file_field :scan %>  
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

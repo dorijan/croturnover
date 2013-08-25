@@ -1,0 +1,42 @@
+<%= form_for @racun do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :firma_id %><br />
+    <%= collection_select(:racun, :firma_id, Firma.all, :id, :naziv) %>	
+  </p>  
+  <p>
+    <%= f.label :datum %><br />
+    <%= f.date_select :datum %>
+  </p>
+  <p>
+    <%= f.label :datumdob %><br />
+    <%= f.date_select :datumdob %>
+  </p>
+  <p>
+    <%= f.label :redbroj %><br />
+    <%= f.number_field :redbroj %>
+  </p>
+  <p>
+    <%= f.label :godina %><br />
+    <%= f.number_field :godina %>
+  </p>
+  <p>
+    <%= f.label :vrstar %><br />
+    <%= f.text_field :vrstar %>
+  </p>
+  <p>
+    <%= f.label :rokpl %><br />
+    <%= f.text_field :rokpl %>
+  </p>
+  <p>
+    <%= f.label :dodajzig %><br />
+    <%= f.number_field :dodajzig %>
+  </p>
+  <p>
+    <%= f.label :placeno %><br />
+    <%= f.number_field :placeno %>
+  </p>  
+  
+  
+  <p><%= f.submit %></p>
+<% end %>

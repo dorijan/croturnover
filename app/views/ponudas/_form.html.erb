@@ -1,0 +1,16 @@
+<%= form_for @ponuda do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :firma_id %><br />
+    <%= collection_select(:ponuda, :firma_id, Firma.all, :id, :naziv) %>	
+  </p>    
+  <p>
+    <%= f.label :datum %><br />
+    <%= f.date_select :datum %>
+  </p>
+  <p>
+    <%= f.label :redbroj %><br />
+    <%= f.number_field :redbroj %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

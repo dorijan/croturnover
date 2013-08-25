@@ -1,0 +1,113 @@
+
+#opcc{
+	position:relative;
+}
+
+#primatelj{
+	width: 300px;
+/*	height: 300px;*/
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	border: 1px solid #C3C3C3;
+	background-color: #E5EECC;
+	padding: 0px 10px;
+}
+
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+	page-break-inside:avoid;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+table.gridtable tr {
+	page-break-inside:avoid; 
+	page-break-after:auto;
+}
+#racun{
+	font-size: 3em;
+	font-family: Garamond, "Times New Roman", serif;
+	color: #777;
+	float: left;
+	display: block;
+	text-align:center
+}
+
+.clear { clear:both; }
+
+#glavna{
+}
+
+#napomena{
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:60px;   /* Height of the footer */
+
+}
+
+/*  
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+
+* {margin:0;padding:0;} 
+
+/* must declare 0 margins on everything, also for main layout components use padding, not 
+vertical margins (top and bottom) to add spacing, else those margins get added to total height 
+and your footer gets pushed down a bit more, creating vertical scroll bars in the browser */
+
+html, body {height: 100%;}
+
+#wrap {min-height: 900px;}
+
+#main {overflow:auto;
+	padding-bottom: 180px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+	margin-top: -180px; /* negative value of footer height */
+	height: 180px;
+	clear:both;} 
+
+/*Opera Fix*/
+body:before {/* thanks to Maleika (Kohoutec)*/
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+#zig{
+	position:absolute;
+	bottom:100px;
+	right: 100px;
+
+}
+
+#meniji{
+  display:none;
+}
+
+.nesto{
+  display:none;
+}

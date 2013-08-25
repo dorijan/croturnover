@@ -1,0 +1,91 @@
+<% title t(:ponuda)+" "+("%04d" % @racun.redbroj).to_s %>
+<%= stylesheet_link_tag "/stylesheets/print", :media=>"print" %>
+<div id="wrap">
+
+	<div id="main">
+<div id="glavna">
+<div id="izdavatelj">
+<div style="float: left; padding-right:10px;">
+<%= image_tag "/img/laulogo.png", :height=>"90px"%>
+</div>
+<div >
+<h3><% t(:izdavatelj)%></h3>
+<p><%= Firma.find(1).naziv%></p>
+<p><%= Firma.find(1).sjediste%>, <%= Firma.find(1).gradbroj+" "+Firma.find(1).adresa1+", "+Firma.find(1).adresa2 %><strong>, <%= t(:OIB)%>: </strong><%= Firma.find(1).OIB%></p>
+<p><%= Firma.find(1).ostalo%></p>
+<p><strong><%= t(:iban)%>: </strong><%= Firma.find(1).ibanbrracuna%></p><p><strong><%= t(:ziro)%>: </strong><%= Firma.find(1).ziro%></p>
+
+</div>
+</div><br>
+<div id="racun"><%= t(:ponuda) %></div>
+	<div class="clear"></div><br>
+<div id="opcc">
+<div id="opcenito">
+<p>
+  <strong><%= t(:ponudabroj) %></strong>
+  <%= "%04d" % @racun.redbroj %>-<%= @racun.godina %>
+</p>
+<p>
+  <strong><%= t(:datumponuda)%></strong>
+  <%= l @racun.datum %>
+</p>
+
+<p>
+  <strong><%= t(:mjestoizdpon)%></strong>
+  <%= Firma.find(1).adresa1 %>
+</p>
+
+<p>
+  <strong><%= t(:rokponude)%></strong>
+  <%= l (@racun.datum+@racun.rokpl.days) %>
+</p>
+<br>
+<br>
+<br>
+</div>
+<div id="primatelj">
+<h3><%= t(:primateljponude)%></h3>
+<p><%= @racun.firma.naziv%></p>
+<p><%= @racun.firma.sjediste%></p>
+<p><%= @racun.firma.gradbroj+" "+@racun.firma.adresa1+", "+@racun.firma.adresa2 %></p>
+<p><strong><%= t(:OIB)%>: </strong><%= @racun.firma.OIB%></p>
+</div>
+</div>
+
+<div id="stavke">
+<table class="table gridtable">
+<tr><th>R.b.</th><th>Naziv</th><th>J.m.</th><th>Kol.</th><th>Cijena</th>
+<% if @brojrabata>0 %> <th>Rabat</th><% end %>
+<th>Ukupno</th></tr>
+<% @stav.each do |s|%>
+<tr>
+	<td><%= @rb %></td>
+<!--	<td><% s.id %></td> -->
+	<td><%= s.stavka.naziv %></td>
+	<td><%= s.stavka.tip.naziv %></td>
+	<td><%= s.kolicina %></td>	
+	<td><%= number_to_currency(s.stavka.cijena) %></td>
+<% if @brojrabata>0 %>	<td><%= s.rabat %>%</td> <% end %>
+	<td><%= number_to_currency(@ukupnored=((s.stavka.cijena*s.kolicina)*(100-s.rabat)/100)) %></td>
+		<% @ukupno=@ukupno+@ukupnored%>
+</tr>
+<% @rb=@rb+1 %>
+<% end%>
+<tr>
+	<td></td> <td></td>  <td></td> <td></td>
+
+<% if @brojrabata>0 %> 	<td></td> <% end %> 
+	<td><b><%= t(:iznpon)%></b></td> 	
+	<td><%= number_to_currency(@ukupno) %></td>
+</tr>
+</table><br><br>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div id="divFooter">
+<h3><%= t(:napomena)%></h3>
+</div>

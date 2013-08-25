@@ -1,0 +1,40 @@
+<%= form_for @loko do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :radnik_id %><br />
+    <%= collection_select(:loko, :radnik_id, Radnik.all, :id, :prez) %>
+  </p>
+  <p>
+    <%= f.label :auto_id %><br />
+    <%= collection_select(:loko, :auto_id, Auto.all, :id, :marka) %>
+  </p>
+  <p>
+    <%= f.label :datum %><br />
+    <%= f.date_select :datum %>
+  </p>
+  <p>
+    <%= f.label :poc_broj %><br />
+    <%= f.text_field :poc_broj %>
+  </p>
+  <p>
+    <%= f.label :kraj_broj %><br />
+    <%= f.text_field :kraj_broj %>
+  </p>
+  <p>
+    <%= f.label :lokacija %><br />
+    <%= f.text_field :lokacija %>
+  </p>
+  <p>
+    <%= f.label :izvjesce %><br />
+    <%= f.text_field :izvjesce %>
+  </p>
+  <p>
+    <%= f.label :dodatak %><br />
+    <%= f.text_field :dodatak %>
+  </p>
+  <p>
+    <%= f.label :dodcijena %><br />
+    <%= f.text_field :dodcijena %>
+  </p>    
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,23 @@
+<% title "Racuns" %>
+
+<table class="table">
+  <tr>
+    <th>Firma</th>
+    <th>Datum</th>
+    <th>Redbroj</th>
+    <th>Placeno</th>
+  </tr>
+  <% for racun in @racuns %>
+    <tr>
+      <td><%= racun.firma.naziv %></td>
+      <td><%= racun.datum %></td>
+      <td><%= racun.redbroj %></td>
+      <td><%= racun.placeno ? "DA" : "NE" %></td>      
+      <td><%= link_to "Prikazi", racun %></td>
+      <td><%= link_to "Uredi", edit_racun_path(racun) %></td>
+      <td><%= link_to "Obrisi", racun, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Novi racun", new_racun_path %></p>

@@ -1,0 +1,27 @@
+<% title "Ulracunis" %>
+<%= stylesheet_link_tag "/stylesheets/print", :media=>"print" %>
+
+<table class="gridtable">
+  <tr>
+	<th>ID</th>
+    <th>Datum</th>
+    <th>Opis</th>
+    <th>Priznos</th>
+    <th>Firma</th>	
+	
+  </tr>
+  <% for ulracuni in @ulracunis %>
+    <tr>
+      <td><%= ulracuni.id %></td>	
+      <td><%= l ulracuni.datum %></td>
+      <td><%= ulracuni.opis %></td>
+      <td><%= ulracuni.priznos %></td>
+      <td><%= Firma.find(ulracuni.firma_id).naziv %></td>
+      <td class="nesto"><%= link_to "Edit", edit_ulracuni_path(ulracuni) %></td>
+      <td class="nesto"><%= link_to "Destroy", ulracuni, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<div class="nesto">
+<p><%= link_to "New Ulracuni", new_ulracuni_path %></p>
+</div>

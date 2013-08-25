@@ -1,0 +1,36 @@
+<% title "Loko" %>
+
+<p>
+  <strong>Radnik:</strong>
+  <%= @loko.radnik_id %>
+</p>
+<p>
+  <strong>Auto:</strong>
+  <%= @loko.auto_id %>
+</p>
+<p>
+  <strong>Datum:</strong>
+  <%= @loko.datum %>
+</p>
+<p>
+  <strong>Poc Broj:</strong>
+  <%= @loko.poc_broj %>
+</p>
+<p>
+  <strong>Kraj Broj:</strong>
+  <%= @loko.kraj_broj %>
+</p>
+<p>
+  <strong>Lokacija:</strong>
+  <%= @loko.lokacija %>
+</p>
+<p>
+  <strong>Izvjesce:</strong>
+  <%= @loko.izvjesce %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_loko_path(@loko) %> |
+  <%= link_to "Destroy", @loko, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", lokos_path %>
+</p>

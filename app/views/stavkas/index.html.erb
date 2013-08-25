@@ -1,0 +1,21 @@
+<% title "Stavkas" %>
+
+<table>
+  <tr>
+    <th>Naziv</th>
+    <th>Cijena</th>
+    <th>Tip</th>
+  </tr>
+  <% for stavka in @stavkas %>
+    <tr>
+      <td><%= stavka.naziv %></td>
+      <td><%= stavka.cijena %></td>
+      <td><%= stavka.tip %></td>
+      <td><%= link_to "Show", stavka %></td>
+      <td><%= link_to "Edit", edit_stavka_path(stavka) %></td>
+      <td><%= link_to "Destroy", stavka, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Stavka", new_stavka_path %></p>

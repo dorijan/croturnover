@@ -1,0 +1,36 @@
+<%= form_for @firma do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :naziv %><br />
+    <%= f.text_field :naziv %>
+  </p>
+  <p>
+    <%= f.label :sjediste %><br />
+    <%= f.text_field :sjediste %>
+  </p>
+  <p>
+    <%= f.label :adresa1 %><br />
+    <%= f.text_field :adresa1 %>
+  </p>
+  <p>
+    <%= f.label :adresa2 %><br />
+    <%= f.text_field :adresa2 %>
+  </p>
+  <p>
+    <%= f.label :gradbroj %><br />
+    <%= f.text_field :gradbroj %>
+  </p>
+  <p>
+    <%= f.label :mb %><br />
+    <%= f.text_field :mb %>
+  </p>
+  <p>
+    <%= f.label :OIB %><br />
+    <%= f.text_field :OIB %>
+  </p>
+  <p>
+    <%= f.label :ibanbrracuna %><br />
+    <%= f.text_field :ibanbrracuna %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

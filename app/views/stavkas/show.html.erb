@@ -1,0 +1,20 @@
+<% title "Stavka" %>
+
+<p>
+  <strong>Naziv:</strong>
+  <%= @stavka.naziv %>
+</p>
+<p>
+  <strong>Cijena:</strong>
+  <%= @stavka.cijena %>
+</p>
+<p>
+  <strong>Tip:</strong>
+  <%= @stavka.tip %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_stavka_path(@stavka) %> |
+  <%= link_to "Destroy", @stavka, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", stavkas_path %>
+</p>

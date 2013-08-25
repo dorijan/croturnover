@@ -1,0 +1,40 @@
+<% title "Firma" %>
+
+<p>
+  <strong>Naziv:</strong>
+  <%= @firma.naziv %>
+</p>
+<p>
+  <strong>Sjediste:</strong>
+  <%= @firma.sjediste %>
+</p>
+<p>
+  <strong>Adresa1:</strong>
+  <%= @firma.adresa1 %>
+</p>
+<p>
+  <strong>Adresa2:</strong>
+  <%= @firma.adresa2 %>
+</p>
+<p>
+  <strong>Gradbroj:</strong>
+  <%= @firma.gradbroj %>
+</p>
+<p>
+  <strong>Mb:</strong>
+  <%= @firma.mb %>
+</p>
+<p>
+  <strong>Oib:</strong>
+  <%= @firma.OIB %>
+</p>
+<p>
+  <strong>Ibanbrracuna:</strong>
+  <%= @firma.ibanbrracuna %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_firma_path(@firma) %> |
+  <%= link_to "Destroy", @firma, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", firmas_path %>
+</p>
